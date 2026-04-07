@@ -1,0 +1,31 @@
+in a  192.168.1.0/24 it needs to be split into 4 using 45 per subnet the appropriate CIDR from what i have computed based on their number of host they can accommodate  and /26 is the matching one 
+
+1st subnet 192.168.1.0/26
+
+32-26 = 6 number of hostbits
+2^6 -2 = 62 usable address 
+
+1-62 = 62 digits  for 62 usable  -2 digits/address for network and broadcast namely .0 network & .63 broadcast
+
+
+2nd subnet
+
+65-126	= 62 usable addresses less 2  digits / addresses for network and broadcast namely .64 network and .127 broadcast
+
+3rd subnet 
+129-190 = 62 usable addresses less 2 digits / addresses for network and broadcast namely .128 network and .191 broadcast
+
+
+4rth subnet 
+193 -254 = 62 usable addresses  less 2 digits / addresses for network and broadcast namely .192 network  and .255 broadcast 
+
+
+
+
+
+
+
+
+
+
+
