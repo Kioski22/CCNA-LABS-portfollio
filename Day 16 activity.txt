@@ -1,0 +1,56 @@
+day 16 activity setting up vlan part one 
+
+ive successfully configured 3subnets and 3 vlans 
+given network 10.0.0.0/24
+
+for the engineering department 
+network address :10.0.0.0/26
+broadcast address: 10.0.0.63/26
+first usable : 10.0.0.1/26 
+last usable : 10.0.0.62/26
+interfaces f3/1, f4/1, g0/1 are in the vlan 10
+
+for the Hr department 
+network address :10.0.0.64/26
+broadcast address: 10.0.0.127/26
+first usable : 10.0.0.65/26 
+last usable : 10.0.0.126/26
+interfaces f5/1, f6/1, g1/1 are in the vlan 20
+
+for the Hr department 
+network address :10.0.0.128/26
+broadcast address: 10.0.0.191/26
+first usable : 10.0.0.129/26 
+last usable : 10.0.0.190/26
+interfaces f7/1, f8/1, g2/1 are in the vlan 30
+
+list of used command 
+
+-setting up ip addresses
+enable
+conf t 
+int interface-id
+ip address ip-address netmask (255.255.255.192)
+no shut 
+default gateways 
+for vlan 10-- 10.0.0.62
+ for vlan 20 -- 10.0.0.126
+ for vlan 30 -- 10.0.0.190
+
+- setting up access ports and vlan 
+enable
+conf t 
+int range range-id's
+switchport mode access
+switchport access vlan vlan-id
+
+
+
+ 
+
+
+
+
+
+
+
