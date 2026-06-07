@@ -1,0 +1,32 @@
+Day 32 cisco Labs 
+ipv6 configuration part 2 
+
+
+in r1 g0/1 int  the subnet assigned is 2001:db8::/64
+r1's g0/1 hardware address is 0030.f236.4502
+
+using EUI-64 calculated the unique identifier and come up with 
+
+            0230:f2ff:fe36:4502 
+appending it to the global routing prefix and subnet identifier
+
+              2001:db8:0:0:230:f2ff:fe36:4502
+
+
+
+In R2'S G0/1's interface 
+ the assigned subnet is 2001:db8:0:1::/64
+the hardware address of R2's g0/1 interface is  0001.63b0.b802
+
+using EUI-64 calculated the unique identifier and come up with
+
+
+            0201:63ff:feb0:b802 
+
+appending it to the global routing prefix and subnet identifier (subnet)
+
+         2001:db8:0:1:201:63ff:feb0:b802
+
+
+
+
